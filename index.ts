@@ -1,3 +1,5 @@
+import process from "process";
+
 import cors from "cors";
 import express from "express";
 
@@ -6,6 +8,8 @@ import { DatabaseIndexer } from "./databaseindexer";
 import { MasterCalAPIController } from "./controllers/mastercalapi.controller";
 import { MasterCalMainPageController } from "./controllers/mastercalmainpage.controller";
 import { logger } from "./utils/Logger";
+
+process.title = "mastercal";
 
 const app = express();
 app.use(cors());
